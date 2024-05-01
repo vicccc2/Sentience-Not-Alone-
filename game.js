@@ -29,7 +29,7 @@ let config = {
         y: 400,
         x: 0
       },
-      debug: true
+      debug: false
     }
   },
   scene: [mainMenuScene, fall, gameOver]
