@@ -19,18 +19,6 @@ class mainMenuScene extends Phaser.Scene {
       this.game.scale.startFullscreen();
     });
 
-    music = this.sound.add('music');
-    music.play({
-      volume: 0,
-      loop: true
-    });
-
-    this.tweens.add({
-      targets: music,
-      volume: musicVolume,
-      duration: 5000
-    });
-
     // zKey to interact and continue/start game
     zKey = this.input.keyboard.addKey('z');
 
@@ -43,6 +31,18 @@ class mainMenuScene extends Phaser.Scene {
       fontFamily: 'c64esque',
       color: '#FFF',
       lineSpacing: 6
+    });
+
+    music = this.sound.add('music');
+    music.play({
+      volume: 0,
+      loop: true
+    });
+
+    this.tweens.add({
+      targets: music,
+      volume: musicVolume,
+      duration: 5000
     });
 
   }
